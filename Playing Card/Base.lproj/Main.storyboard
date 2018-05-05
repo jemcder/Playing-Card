@@ -19,13 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="laR-S0-H4d" customClass="PlayingCardView" customModule="Playing_Card" customModuleProvider="target">
-                                <rect key="frame" x="16" y="137.33333333333331" width="342" height="547.33333333333348"/>
+                            <view opaque="NO" contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laR-S0-H4d" customClass="PlayingCardView" customModule="Playing_Card" customModuleProvider="target">
+                                <rect key="frame" x="16" y="133" width="342" height="547.33333333333348"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="800" id="5Tw-MU-RFk"/>
                                     <constraint firstAttribute="width" secondItem="laR-S0-H4d" secondAttribute="height" multiplier="5:8" id="wOT-Hn-SNI"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
