@@ -11,7 +11,24 @@ import UIKit
 class PlayingCardViewController: UIViewController {
 
     var deck = PlayingCardDeck()
-    
+
+    @IBOutlet private var cardViews: [PlayingCardView]!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var cards = [PlayingCard]()
+        for _ in 1...((cardViews.count+1)/2) {
+            let card = deck.draw()!
+            cards += [card, card]
+        }
+        for cardView in cardViews {
+            cardView.isFaceUp = true
+            let card = cards.remove(at: cards.count.arc4random)
+            cardView.rank = card.rank.order
+            cardView.suit = card.suit.rawValue
+        }
+    }
+
     @IBOutlet weak var playingCardView: PlayingCardView! {
         didSet {
             let swipe = UISwipeGestureRecognizer(target: self, action: #selector(nextCard))
@@ -36,11 +53,6 @@ class PlayingCardViewController: UIViewController {
             playingCardView.rank = card.rank.order
             playingCardView.suit = card.suit.rawValue
         }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
     }
 }
 
