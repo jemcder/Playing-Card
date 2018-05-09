@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66A95B43209B6D7100BD6CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A95B42209B6D7100BD6CD5 /* AppDelegate.swift */; };
-		66A95B45209B6D7100BD6CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A95B44209B6D7100BD6CD5 /* ViewController.swift */; };
+		66A95B45209B6D7100BD6CD5 /* PlayingCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A95B44209B6D7100BD6CD5 /* PlayingCardViewController.swift */; };
 		66A95B48209B6D7100BD6CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A95B46209B6D7100BD6CD5 /* Main.storyboard */; };
 		66A95B4A209B6D7E00BD6CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A95B49209B6D7E00BD6CD5 /* Assets.xcassets */; };
 		66A95B4D209B6D7E00BD6CD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A95B4B209B6D7E00BD6CD5 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		66A95B3F209B6D7100BD6CD5 /* Playing Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playing Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A95B42209B6D7100BD6CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66A95B44209B6D7100BD6CD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66A95B44209B6D7100BD6CD5 /* PlayingCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardViewController.swift; sourceTree = "<group>"; };
 		66A95B47209B6D7100BD6CD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66A95B49209B6D7E00BD6CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66A95B4C209B6D7E00BD6CD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			children = (
 				66A95B55209B6E3C00BD6CD5 /* PlayingCard.swift */,
 				66A95B57209B773F00BD6CD5 /* PlayingCardDeck.swift */,
-				66A95B44209B6D7100BD6CD5 /* ViewController.swift */,
+				66A95B44209B6D7100BD6CD5 /* PlayingCardViewController.swift */,
 				66A95B59209B8AD800BD6CD5 /* PlayingCardView.swift */,
 				66A95B46209B6D7100BD6CD5 /* Main.storyboard */,
 				66A95B49209B6D7E00BD6CD5 /* Assets.xcassets */,
@@ -152,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A95B45209B6D7100BD6CD5 /* ViewController.swift in Sources */,
+				66A95B45209B6D7100BD6CD5 /* PlayingCardViewController.swift in Sources */,
 				66A95B58209B773F00BD6CD5 /* PlayingCardDeck.swift in Sources */,
 				66A95B56209B6E3C00BD6CD5 /* PlayingCard.swift in Sources */,
 				66A95B5A209B8AD800BD6CD5 /* PlayingCardView.swift in Sources */,

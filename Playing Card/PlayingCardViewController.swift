@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlayingCardViewController.swift
 //  Playing Card
 //
 //  Created by John McDermott on 5/3/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlayingCardViewController: UIViewController {
 
     var deck = PlayingCardDeck()
     
