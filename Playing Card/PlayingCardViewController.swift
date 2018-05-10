@@ -22,10 +22,47 @@ class PlayingCardViewController: UIViewController {
             cards += [card, card]
         }
         for cardView in cardViews {
-            cardView.isFaceUp = true
+            cardView.isFaceUp = false
             let card = cards.remove(at: cards.count.arc4random)
             cardView.rank = card.rank.order
             cardView.suit = card.suit.rawValue
+            cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard(_:))))
+
+        }
+    }
+
+    private var faceUpCardViews: [PlayingCardView] {
+        return cardViews.filter { $0.isFaceUp && !$0.isHidden }
+    }
+
+    @objc func flipCard(_ recognizer: UITapGestureRecognizer) {
+        switch recognizer.state {
+        case .ended:
+            if let chosenCardView = recognizer.view as? PlayingCardView {
+                UIView.transition(
+                    with: chosenCardView,
+                    duration: 0.6,
+                    options: [.transitionFlipFromLeft],
+                    animations: {
+                        chosenCardView.isFaceUp = !chosenCardView.isFaceUp
+                },
+                    completion: { finished in
+                        if self.faceUpCardViews.count == 2 {
+                            self.faceUpCardViews.forEach { cardView in
+                                UIView.transition(
+                                    with: cardView,
+                                    duration: 0.6,
+                                    options: [.transitionFlipFromLeft],
+                                    animations: {
+                                        cardView.isFaceUp = false
+                                }
+                                )
+                            }
+                        }
+                    }
+                )
+            }
+        default: break
         }
     }
 
@@ -39,14 +76,14 @@ class PlayingCardViewController: UIViewController {
         }
     }
 
-    @IBAction func flipCard(_ sender: UITapGestureRecognizer) {
-        switch sender.state {
-        case .ended:
-            playingCardView.isFaceUp = !playingCardView.isFaceUp
-        default: break
-        }
-
-    }
+//    @IBAction func flipCard(_ sender: UITapGestureRecognizer) {
+//        switch sender.state {
+//        case .ended:
+//            playingCardView.isFaceUp = !playingCardView.isFaceUp
+//        default: break
+//        }
+//
+//    }
 
     @objc func nextCard() {
         if let card = deck.draw() {
